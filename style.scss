@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    color: $c1-2;
+}
+  
+body {
+    $c1-1: #f6ebda;
+    $c1-2: #2f2105;
+    $c1-3: #ff902b;
+    $c1-4: #ffffff;
+    $c1-5: #7e7d7a;
+    $c1-6: #f9d9aa;
+    $linear--: gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.7) 100%);
+    $shadow--: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.15));
+    background: $c1-4;
+}
+  
+img {
+    max-width: 100%;
+}
+  
+a {
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+  
+ul {
+    list-style: none;
+}
+  
+.row {
+    display: flex;
+}
+  
+.flex {
+    flex-wrap: wrap;
+    gap: clamp(2em, 5vw, 5em);
+}
+  
+.flex > * {
+    flex: 1 1 25em;
+}
+  
+.column {
+    display: grid;
+}
+  
+.grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2em;
+    padding-top: 2em;
+}
+  
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+  
+/* Page Button */
+.page-btn,
+.page-btn.active:hover {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: $c1-4;
+    background: $c1-2;
+    padding: 0.4em 2em;
+    fill: transparent;
+    stroke: $c1-4;
+    align-items: center;
+    gap: 0.5em;
+    border: 1px solid $c1-2;
+    border-radius: 100px;
+    transition: 0.5s ease-in-out;
+}
+  
+.page-btn:hover,
+.page-btn.active {
+    color: $c1-2;
+    stroke: $c1-2;
+    background: transparent;
+}
+  
+/* End Page Button */
+  
+.img img {
+    width: 100%;
+    object-fit: contain;
+}
+  
+.tag {
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    background: $linear--;
+    backdrop-filter: 5px;
+    filter: $shadow--;
+    padding: 00.25em 0.5em;
+    border: 2px solid rgba(230, 218, 218, 0.959);
+    border-radius: 10px;
+    box-shadow: 0 0 0 9px rgba(238, 233, 233, 0.918) inset, 0 0 0 9px rgba(231, 228, 228, 0.877) inset, 0 0 10px rgba(0, 0, 0, 0.096);
+}
+  
+.tag:nth-of-type(2) {
+    top: 0;
+    left: 0;
+    bottom: auto;
+}
+  
+.tag:nth-of-type(3) {
+    top: 25%;
+    left: auto;
+    bottom: auto;
+    right: 0;
+}
+  
+.tag-bg {
+    background: $c1-4;
+    align-items: center;
+    gap: 0.5em;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: capitalize;
+    padding: 00.25em 0.5em;
+    border-radius: 10px;
+}
+  
+.tag-bg img {
+    max-width: 14px;
+}
+
+/* End Hero Section */
+  
+/* Popular */
+  .popular {
+    position: relative;
+    padding: 6em 0.2em 0;
+}
+  
+  .popular::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 70%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 40% 45%;
+    z-index: -1;
+  }
+  
+h2,
+h2 span {
+    font-weight: 600;
+    font-size: clamp(25px, 5vw, 35px);
+    line-height: clamp(30px, 5vw, 40px);
+    text-transform: capitalize;
+}
+  
+h2 span {
+    border-bottom: 5px solid $c1-3;
+}
+  
+.popular-cards {
+    position: relative;
+    z-index: 2;
+    padding: 2em 1.5em;
+}
+  
+.popular-cards::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    background: $c1-6;
+    z-index: -1;
+    border-radius: 50px;
+}
+  
+.card {
+    background: $linear--;
+    backdrop-filter: 5px;
+    filter: $shadow--;
+    padding: 0.5em;
+    border-radius: 50px;
+}
+  
+.card-bg {
+    background: $c1-4;
+    padding: 1em;
+    height: 100%;
+    border-radius: 20px;
+}
+  
+.c-img {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+  
+.c-img .tag {
+    top: 2.5%;
+    left: 2.5%;
+    bottom: auto;
+}
+  
+.tag-img {
+    width: 100%;
+    height: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+  
+.tittle,
+.option {
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+  
+.tittle {
+    padding: 1em 0;
+}
+  
+h3 {
+    font-weight: 500;
+    font-size: clamp(15px, 2.5vw, 22px);
+    line-height: clamp(20px, 2.5vw, 27px);
+}
+  
+select {
+    color: $c1-3;
+    background: $c1-2;
+    border: 1px solid $c1-6;
+    outline-color: $c1-3;
+    padding: 0.5em;
+    border-radius: 20px;
+}
+  
+option {
+    color: $c1-3;
+}
+  
+.about-content h3 {
+    padding: 0.5em 0;
+}
+  
+/* About */
+.about {
+    position: relative;
+    padding: 2em 0 4em 0;
+}
+  
+.about::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background: url(bg-aboutus.png), $c1-1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 60%;
+    z-index: -1;
+}
+  
+.about-img 
+.swiper-slide .row {
+    justify-content: center;
+    max-width: max-content;
+    margin: 0 auto;
+    background: $linear--;
+    padding: 0.5em;
+    filter: $shadow--;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+  
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+  
+.about-content {
+    align-self: flex-end;
+}
+  
+.about-content .page-btn {
+    margin-top: 1em;
+}
+  
+/* End About */
+    
